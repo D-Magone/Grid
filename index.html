@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto auto;
+      grid-gap: 1px;
+      /*background-color: rgb(56, 189, 212);*/
+      padding: 10px;
+      grid-template-rows: 75px 50px 100px 100px 100px 100px;
+      border: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .grid-item1 {
+      font-size: 30px;
+      align-content: center;
+      text-align: center;
+      color: rgb(56, 189, 212);
+      padding: 10px 0;
+    }
+
+    .grid-place {
+      font-size: 20px;
+      align-content: center;
+      text-align: center;
+      background-color: rgb(56, 189, 212);
+      padding: 10px 0;
+      color: aliceblue;
+    }
+
+    .grid-item1 {
+      grid-column-start: 1;
+      grid-column-end: 6;
+    }
+
+    .grid-item2 {
+      grid-column-start: 1;
+      grid-column-end: 1;
+    }
+
+    .grid-item3 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    }
+
+    .grid-item4 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    }
+
+    .grid-item5 {
+    grid-column-start: 5;
+    grid-column-end: 5;
+    }
+
+    .blue {
+      background-color: aliceblue;
+    }
+
+    </style>
+</head>
+<body>
+  <div>
+    <nav>
+      <div>
+        <a>Main page</a>
+        <a>Products</a>
+        <a>People</a>
+        <a>Contacts</a>
+        <a>About us</a>
+      </div>
+    </nav>
+    <main>
+      <h1 style="font-size: 60px; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; color: rgb(56, 189, 212);">Join a mission in Antarctica!</h1>
+      <section class="section1">
+        <div class="column">
+          <img src="img1.jpg" alt="Antarctica 1" style="width:100%">
+        </div>
+        <div class="column">
+          <a class="picturetext">Great views!</a>
+        </div><br>
+      </section>
+      <section class="section1">
+        <div class="column">
+          <a class="picturetext">Peaceful surroundings!</a>
+        </div>
+        <div class="column">
+          <img src="img2.jpg" alt="Antarctica 2" style="width:100%">
+        </div><br>
+      </section>
+      <section class="section1">
+        <div class="column">
+          <img src="img3.jpg" alt="Antarctica 3" style="width:100%">
+        </div>
+        <div class="column">
+          <a class="picturetext">Join now!</a>
+        </div><br>
+      </section><br>
+    
+    <div class="grid-container">
+      <div class="grid-item1">Available postions</div>
+      <div id="grid-item21" class="grid-item2 grid-place">Postion</div>
+      <div id="grid-item22" class="grid-item3 grid-place">Requirements</div>  
+      <div id="grid-item23" class="grid-item4 grid-place">Start/End Date</div>
+      <div id="grid-item24" class="grid-item5 grid-place">Salary</div>
+      <div class="grid-item">Helicopter pilot</div>  
+      <div class="grid-item">
+        <ul>
+          <li>Must receive flight training at an FAA-approved flight school.</li>
+          <li>Must complete 150 hours of flight time.</li>
+        </ul>
+      </div>
+      <div class="grid-item">27/10/2020</div>
+      <div class="grid-item">31/05/2021</div>
+      <div class="grid-item">$80,500</div>
+      <div class="grid-item blue">Mechanic</div>
+      <div class="grid-item blue">
+        <ul>
+          <li>Certification from a vocational school or trade school is preferred.</li>
+          <li>A minimum of 2 years’ experience in a similar role.</li>
+        </ul>
+      </div>
+      <div class="grid-item blue">27/10/2020</div>
+      <div class="grid-item blue">20/05/2021</div> 
+      <div class="grid-item blue">$75,000</div>
+      <div class="grid-item">Palaeontologist</div>
+      <div class="grid-item">
+        <ul>
+          <li>Ph.D. in palaeontology.</li>
+          <li>Studying field in frozen remains of prehistoric finds.</li>
+        </ul>
+      </div>
+      <div class="grid-item">27/10/2020</div>
+      <div class="grid-item">25/05/2021</div>
+      <div class="grid-item">$78,500</div>
+      <div class="grid-item blue">Cook</div>
+      <div class="grid-item blue">
+        <ul>
+          <li>Culinary school 2-4 year degree or foreign equivalency preferred.</li>
+          <li>Good working knowledge of accepted sanitation standards and health codes.</li>
+        </ul>
+      </div>
+      <div class="grid-item blue">27/10/2020</div>
+      <div class="grid-item blue">16/05/2021</div>
+      <div class="grid-item blue">$66,000</div>
+  
+    </div>
+  
+    <br><br>
+    <div class="container1">
+      <form class="myform" action="html.html" method="get">
+        <h2 style="color: rgb(56, 189, 212);">Fill out the form bellow to apply</h2>
+        <input class="input1" name="Name" id="Name" placeholder=" Your name here..."><br><br>
+        <input class="input1" name="Surname" id="Surname" placeholder=" Your surname here..."><br><br>
+        <b>Choose your gender:</b><br><br>
+        <label for="man">Man:</label>
+        <input type="radio" name="gender" id="man" value="man">
+        <label for="woman">Woman:</label>
+        <input type="radio" name="gender" id="woman" value="woman">
+        <label for="alien">Alien:</label>
+        <input type="radio" name="gender" id="alien" value="alien">
+        <label for="other">Other:</label>
+        <input type="radio" name="gender" id="other" value="other"><br><br>
+        <b>Which postion are you applying for?</b>
+        <select name="select" id="select">
+          <option value="" selected disabled hidden>Select postion</option>
+          <option value="1">Helicopter pilot</option>
+          <option value="1">Mechanic</option>
+          <option value="1">Palaeontologist</option>
+          <option value="1">Cook</option>
+        </select><br><br>
+        <b>Additional questions</b>
+        <table class="table2">
+        <thead>
+         <tr>
+          <th id="blank" headers="blank"></th>
+         </tr>
+        </thead>
+        <tr>
+          <td><label for="Cold">Do you get cold quickly?</label></td>
+          <td><input type="checkbox" name="checkbox" id="Cold"><br></td>
+        </tr>
+        <tr>
+          <td><label for="Pressure">Do you remain cool under extreme pressure?</label></td>
+          <td><input type="checkbox" name="checkbox" id="Pressure"><br></td>
+        </tr>
+        <tr>
+          <td><label for="Person">Are you a peoples person?</label></td>
+          <td><input type="checkbox" name="checkbox" id="Person"><br></td>
+        </tr>
+        <tr>
+          <td><label for="Alien">Are you afraid of extraterrestrial?</label></td>
+          <td><input type="checkbox" name="checkbox" id="Alien"></td>
+        </tr></table><br><br>
+        <textarea name="textarea" cols="65" rows="10" maxlength="300" placeholder="Why do you want to go to Antarctica? (max 300 characters)"></textarea><br><br>
+        <input class="button" type="submit" value="Submit" onclick="submit()">
+      </form><br>
+    </div>
+    <nav class="botomnav">
+      <div>
+        <a>Main page</a>
+        <a>Products</a>
+        <a>People</a>
+        <a>Contacts</a>
+        <a>About us</a>
+      </div>
+    </nav>
+    
+    </main>
+    <footer></footer>
+  </div>
+</body>
+</html>
